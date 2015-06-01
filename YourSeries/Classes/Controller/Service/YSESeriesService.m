@@ -16,8 +16,12 @@
 
 // Constants
 NSString *const YSESeriesServiceTopTenUrl = @"http://www.myapifilms.com/imdb/top";
+NSString *const YSESeriesServiceDetailsUrl = @"http://www.myapifilms.com/imdb?idIMDB=";
 
 @implementation YSESeriesService
+
+/********************************************************************************/
+#pragma mark - Services
 
 + (void)fetchTopTenSeriesWithSuccess:(void (^)(NSArray *movies))success
                              failure:(void (^)(NSArray *errors))failure
@@ -35,6 +39,31 @@ NSString *const YSESeriesServiceTopTenUrl = @"http://www.myapifilms.com/imdb/top
         }
     }];
 }
+
++ (void)detailsForMovieWithidIMDB:(NSString *)idIMDB
+                          success:(void (^)(YSEMovie *movie))success
+                          failure:(void (^)(NSArray *errors))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+    NSString *url = [NSString stringWithFormat:@"%@%@", YSESeriesServiceDetailsUrl, idIMDB];
+    
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        if (success) {
+            YSEMovie *movie = [[YSEMovie alloc] initWithDictionary:responseObject];
+            success(movie);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (error) {
+            
+        }
+    }];
+}
+
+/********************************************************************************/
+#pragma mark - Parsing Responses
 
 + (NSArray *)parseTopTenMoviesResponse:(NSDictionary *)dictionary
 {

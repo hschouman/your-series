@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *urlPoster;
+@property (strong, nonatomic) NSString *idIMDB;
 
 /********************************************************************************/
 #pragma mark - Methods

@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+// Model
+#import "YSEMovie.h"
+
 @interface YSESeriesService : NSObject
+
+/********************************************************************************/
+#pragma mark - Services
 
 + (void)fetchTopTenSeriesWithSuccess:(void (^)(NSArray *movies))success
                              failure:(void (^)(NSArray *errors))failure;
 
-+ (NSArray *)parseTopTenMoviesResponse:(NSDictionary *)dictionary;
++ (void)detailsForMovieWithidIMDB:(NSString *)idIMDB
+                          success:(void (^)(YSEMovie *movie))success
+                          failure:(void (^)(NSArray *errors))failure;
 
 @end

@@ -10,6 +10,7 @@
 
 @interface YSESerieTableViewCell ()
 
+// UI
 @property (strong, nonatomic) IBOutlet UILabel *serieTitleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *serieImageView;
 

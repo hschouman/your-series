@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PFX-GD-hrF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lAv-EE-5Sn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="c1b-Sr-dgV">
+            <objects>
+                <navigationController id="lAv-EE-5Sn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VjV-bC-XgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PFX-GD-hrF" kind="relationship" relationship="rootViewController" id="4sE-X6-riV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yB-H5-4D5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="329"/>
+        </scene>
         <!--Series List View Controller-->
         <scene sceneID="Zel-HJ-9mc">
             <objects>
@@ -47,6 +63,7 @@
                                 <connections>
                                     <outlet property="serieImageView" destination="Sup-O0-Gxe" id="Jep-WE-hQL"/>
                                     <outlet property="serieTitleLabel" destination="n5f-hs-OsU" id="A8b-vE-Odz"/>
+                                    <segue destination="qK3-oa-GBn" kind="show" identifier="YSEMovieDetailsViewControllerSegueIdentifier" id="KTt-X2-OfX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,10 +72,70 @@
                             <outlet property="delegate" destination="PFX-GD-hrF" id="AiG-lu-p6s"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="bLR-P1-93D"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKr-qV-8Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="337" y="329"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="kba-0f-UBT">
+            <objects>
+                <viewController storyboardIdentifier="YSEMovieDetailsViewController" id="qK3-oa-GBn" customClass="YSEMovieDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ra-21-Oqe"/>
+                        <viewControllerLayoutGuide type="bottom" id="TZd-Yw-KYE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xdf-bp-uAL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="## Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-cV-qYS">
+                                <rect key="frame" x="16" y="72" width="568" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="QbM-hf-3VH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zfl-gZ-jiu">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-By-Met">
+                                <rect key="frame" x="16" y="156" width="568" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8lf-QA-kuZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P7i-By-Met" firstAttribute="top" secondItem="Erl-cV-qYS" secondAttribute="bottom" constant="8" id="28n-U0-gji"/>
+                            <constraint firstAttribute="centerY" secondItem="zfl-gZ-jiu" secondAttribute="centerY" id="BsB-PE-haz"/>
+                            <constraint firstAttribute="trailing" secondItem="Erl-cV-qYS" secondAttribute="trailing" constant="16" id="Lfh-Z5-vjC"/>
+                            <constraint firstAttribute="centerX" secondItem="zfl-gZ-jiu" secondAttribute="centerX" id="Qy7-jg-8oL"/>
+                            <constraint firstItem="Erl-cV-qYS" firstAttribute="top" secondItem="0Ra-21-Oqe" secondAttribute="bottom" constant="8" id="bnb-gp-b5f"/>
+                            <constraint firstAttribute="trailing" secondItem="P7i-By-Met" secondAttribute="trailing" constant="16" id="mhB-g5-tJb"/>
+                            <constraint firstItem="Erl-cV-qYS" firstAttribute="leading" secondItem="Xdf-bp-uAL" secondAttribute="leading" constant="16" id="ojN-A8-6BT"/>
+                            <constraint firstItem="P7i-By-Met" firstAttribute="leading" secondItem="Xdf-bp-uAL" secondAttribute="leading" constant="16" id="pow-4U-gxj"/>
+                            <constraint firstItem="P7i-By-Met" firstAttribute="top" secondItem="0Ra-21-Oqe" secondAttribute="bottom" constant="16" id="tzs-Us-81T"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tzs-Us-81T"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="zfl-gZ-jiu" id="xE3-69-1gf"/>
+                        <outlet property="posterImageView" destination="P7i-By-Met" id="TYX-RD-lar"/>
+                        <outlet property="titleLabel" destination="Erl-cV-qYS" id="8iV-d3-tjd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnF-7a-Ug8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="329"/>
         </scene>
     </scenes>
 </document>

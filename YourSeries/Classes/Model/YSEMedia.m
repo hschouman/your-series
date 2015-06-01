@@ -11,6 +11,7 @@
 // WS Keys
 NSString *const YSEMediaTitleWSKey = @"title";
 NSString *const YSEMediaUrlPosterWSKey = @"urlPoster";
+NSString *const YSEMediaidIMDBWSKey = @"idIMDB";
 
 @implementation YSEMedia
 
@@ -30,6 +31,7 @@ NSString *const YSEMediaUrlPosterWSKey = @"urlPoster";
     {
         _title = [dictionary objectForKey:YSEMediaTitleWSKey];
         _urlPoster = [dictionary objectForKey:YSEMediaUrlPosterWSKey];
+        _idIMDB = [dictionary objectForKey:YSEMediaidIMDBWSKey];
     }
     return self;
 }

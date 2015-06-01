@@ -11,8 +11,14 @@
 // View
 #import "YSESerieTableViewCell.h"
 
+// Controller
+#import "YSEMovieDetailsViewController.h"
+
 // Service
 #import "YSESeriesService.h"
+
+// Constant
+NSString *const YSEMovieDetailsViewControllerSegueIdentifier = @"YSEMovieDetailsViewControllerSegueIdentifier";
 
 @interface YSESeriesListViewController ()
 
@@ -40,6 +46,16 @@
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    YSEMovieDetailsViewController *viewController = segue.destinationViewController;
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    YSEMovie *movie = [self.topTenMovies objectAtIndex:path.row];
+    if (movie) {
+        viewController.movie = movie;
+    }
+}
+
 /********************************************************************************/
 #pragma mark - UITableViewDataSource
 
@@ -55,9 +71,5 @@
     [cell configureWithMovie:movie];
     return cell;
 }
-
-/********************************************************************************/
-#pragma mark - UITableViewDelegate
-
 
 @end

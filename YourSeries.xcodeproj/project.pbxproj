@@ -17,6 +17,7 @@
 		1D1E985C1B1C60FF001E60B0 /* YSESerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E985B1B1C60FF001E60B0 /* YSESerie.m */; };
 		1D1E985F1B1C6133001E60B0 /* YSEMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E985E1B1C6133001E60B0 /* YSEMedia.m */; };
 		1D1E98621B1C6147001E60B0 /* YSEMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98611B1C6147001E60B0 /* YSEMovie.m */; };
+		1D1E98651B1C867C001E60B0 /* YSEMovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98641B1C867C001E60B0 /* YSEMovieDetailsViewController.m */; };
 		1D4060931B186C0B00F18695 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4060921B186C0B00F18695 /* main.m */; };
 		1D4060AD1B186C0B00F18695 /* YourSeriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4060AC1B186C0B00F18695 /* YourSeriesTests.m */; };
 		F1A8C58C42A9FB946D3A3072 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577B7341EB22134B28C099B4 /* libPods.a */; };
@@ -50,6 +51,8 @@
 		1D1E985E1B1C6133001E60B0 /* YSEMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMedia.m; sourceTree = "<group>"; };
 		1D1E98601B1C6147001E60B0 /* YSEMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMovie.h; sourceTree = "<group>"; };
 		1D1E98611B1C6147001E60B0 /* YSEMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMovie.m; sourceTree = "<group>"; };
+		1D1E98631B1C867C001E60B0 /* YSEMovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMovieDetailsViewController.h; sourceTree = "<group>"; };
+		1D1E98641B1C867C001E60B0 /* YSEMovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMovieDetailsViewController.m; sourceTree = "<group>"; };
 		1D40608D1B186C0B00F18695 /* YourSeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourSeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4060911B186C0B00F18695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D4060921B186C0B00F18695 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 			children = (
 				1D1E98441B1C5C96001E60B0 /* YSESeriesListViewController.h */,
 				1D1E98451B1C5C96001E60B0 /* YSESeriesListViewController.m */,
+				1D1E98631B1C867C001E60B0 /* YSEMovieDetailsViewController.h */,
+				1D1E98641B1C867C001E60B0 /* YSEMovieDetailsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				1D1E984D1B1C5C96001E60B0 /* YSESeriesListViewController.m in Sources */,
 				1D1E985F1B1C6133001E60B0 /* YSEMedia.m in Sources */,
 				1D1E98591B1C5F4D001E60B0 /* YSESeriesService.m in Sources */,
+				1D1E98651B1C867C001E60B0 /* YSEMovieDetailsViewController.m in Sources */,
 				1D1E984C1B1C5C96001E60B0 /* AppDelegate.m in Sources */,
 				1D1E98621B1C6147001E60B0 /* YSEMovie.m in Sources */,
 				1D4060931B186C0B00F18695 /* main.m in Sources */,
