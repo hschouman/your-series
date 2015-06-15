@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 octo. All rights reserved.
 //
 
-#import "YSESeriesService.h"
+#import "YSEMoviesService.h"
 
 // Manager
 #import "AFHTTPRequestOperationManager.h"
@@ -15,10 +15,10 @@
 #import "YSEMovie.h"
 
 // Constants
-NSString *const YSESeriesServiceTopTenUrl = @"http://www.myapifilms.com/imdb/top";
-NSString *const YSESeriesServiceDetailsUrl = @"http://www.myapifilms.com/imdb?idIMDB=";
+NSString *const YSEMoviesServiceTopTenUrl = @"http://www.myapifilms.com/imdb/top";
+NSString *const YSEMoviesServiceDetailsUrl = @"http://www.myapifilms.com/imdb?idIMDB=";
 
-@implementation YSESeriesService
+@implementation YSEMoviesService
 
 /********************************************************************************/
 #pragma mark - Services
@@ -27,10 +27,10 @@ NSString *const YSESeriesServiceDetailsUrl = @"http://www.myapifilms.com/imdb?id
                              failure:(void (^)(NSArray *errors))failure
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:YSESeriesServiceTopTenUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:YSEMoviesServiceTopTenUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if (success) {
-            success([YSESeriesService parseTopTenMoviesResponse:responseObject]);
+            success([YSEMoviesService parseTopTenMoviesResponse:responseObject]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -46,7 +46,7 @@ NSString *const YSESeriesServiceDetailsUrl = @"http://www.myapifilms.com/imdb?id
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    NSString *url = [NSString stringWithFormat:@"%@%@", YSESeriesServiceDetailsUrl, idIMDB];
+    NSString *url = [NSString stringWithFormat:@"%@%@", YSEMoviesServiceDetailsUrl, idIMDB];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);

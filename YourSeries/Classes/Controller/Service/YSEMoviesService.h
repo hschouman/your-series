@@ -11,7 +11,7 @@
 // Model
 #import "YSEMovie.h"
 
-@interface YSESeriesService : NSObject
+@interface YSEMoviesService : NSObject
 
 /********************************************************************************/
 #pragma mark - Services

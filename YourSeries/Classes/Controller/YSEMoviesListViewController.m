@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 octo. All rights reserved.
 //
 
-#import "YSESeriesListViewController.h"
+#import "YSEMoviesListViewController.h"
 
 // View
 #import "YSESerieTableViewCell.h"
@@ -15,12 +15,12 @@
 #import "YSEMovieDetailsViewController.h"
 
 // Service
-#import "YSESeriesService.h"
+#import "YSEMoviesService.h"
 
 // Constant
 NSString *const YSEMovieDetailsViewControllerSegueIdentifier = @"YSEMovieDetailsViewControllerSegueIdentifier";
 
-@interface YSESeriesListViewController ()
+@interface YSEMoviesListViewController ()
 
 /********************************************************************************/
 #pragma mark - Properties
@@ -29,14 +29,14 @@ NSString *const YSEMovieDetailsViewControllerSegueIdentifier = @"YSEMovieDetails
 
 @end
 
-@implementation YSESeriesListViewController
+@implementation YSEMoviesListViewController
 
 /********************************************************************************/
 #pragma mark - Birth & Death
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [YSESeriesService fetchTopTenSeriesWithSuccess:^(NSArray *movies){
+    [YSEMoviesService fetchTopTenSeriesWithSuccess:^(NSArray *movies){
         self.topTenMovies = movies;
         [self.tableView reloadData];
     } failure:^(NSArray *errors) {

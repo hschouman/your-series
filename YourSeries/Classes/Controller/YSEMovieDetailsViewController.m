@@ -9,7 +9,7 @@
 #import "YSEMovieDetailsViewController.h"
 
 // Service
-#import "YSESeriesService.h"
+#import "YSEMoviesService.h"
 
 // Constant
 NSString *const YSEMovieDetailsViewControllerListSeparator = @", ";
@@ -27,6 +27,7 @@ NSString *const YSEMovieDetailsViewControllerListSeparator = @", ";
 @property (strong, nonatomic) IBOutlet UILabel *directorsTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *directorsLabel;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (strong, nonatomic) IBOutlet UIButton *animateButton;
 
 @end
 
@@ -46,7 +47,7 @@ NSString *const YSEMovieDetailsViewControllerListSeparator = @", ";
 
 - (void)fetDetailsInfosOnTheMovie
 {
-    [YSESeriesService detailsForMovieWithidIMDB:self.movie.idIMDB success:^(YSEMovie *movie) {
+    [YSEMoviesService detailsForMovieWithidIMDB:self.movie.idIMDB success:^(YSEMovie *movie) {
         [self displayDetails];
         self.movie = movie;
         [self configureWithMovie];
@@ -71,6 +72,14 @@ NSString *const YSEMovieDetailsViewControllerListSeparator = @", ";
 }
 
 /********************************************************************************/
+#pragma mark - Actions
+
+- (IBAction)animateButtonDidTap:(id)sender
+{
+    [self animateTitle];
+}
+
+/********************************************************************************/
 #pragma mark - Privates
 
 - (void)displayDetails
@@ -86,6 +95,18 @@ NSString *const YSEMovieDetailsViewControllerListSeparator = @", ";
     [self.directorsTitleLabel setHidden:NO];
     [self.directorsLabel setHidden:NO];
     [self.descriptionTextView setHidden:NO];
+    [self.animateButton setHidden:NO];
+}
+
+- (void)animateTitle
+{
+    self.posterImageView.alpha = 0;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:2];
+    self.posterImageView.alpha = 1;
+    [UIView commitAnimations];
 }
 
 

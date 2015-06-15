@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSESeriesListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface YSEMoviesListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 @end

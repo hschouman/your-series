@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1D1E984C1B1C5C96001E60B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98421B1C5C96001E60B0 /* AppDelegate.m */; };
-		1D1E984D1B1C5C96001E60B0 /* YSESeriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98451B1C5C96001E60B0 /* YSESeriesListViewController.m */; };
+		1D1E984D1B1C5C96001E60B0 /* YSEMoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98451B1C5C96001E60B0 /* YSEMoviesListViewController.m */; };
 		1D1E984E1B1C5C96001E60B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1E98481B1C5C96001E60B0 /* LaunchScreen.xib */; };
 		1D1E984F1B1C5C96001E60B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1E984A1B1C5C96001E60B0 /* Main.storyboard */; };
 		1D1E98521B1C5CA5001E60B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1E98511B1C5CA5001E60B0 /* Images.xcassets */; };
 		1D1E98551B1C5D64001E60B0 /* YSESerieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98541B1C5D64001E60B0 /* YSESerieTableViewCell.m */; };
-		1D1E98591B1C5F4D001E60B0 /* YSESeriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98581B1C5F4D001E60B0 /* YSESeriesService.m */; };
+		1D1E98591B1C5F4D001E60B0 /* YSEMoviesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98581B1C5F4D001E60B0 /* YSEMoviesService.m */; };
 		1D1E985C1B1C60FF001E60B0 /* YSESerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E985B1B1C60FF001E60B0 /* YSESerie.m */; };
 		1D1E985F1B1C6133001E60B0 /* YSEMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E985E1B1C6133001E60B0 /* YSEMedia.m */; };
 		1D1E98621B1C6147001E60B0 /* YSEMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E98611B1C6147001E60B0 /* YSEMovie.m */; };
@@ -36,15 +36,15 @@
 /* Begin PBXFileReference section */
 		1D1E98411B1C5C96001E60B0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D1E98421B1C5C96001E60B0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D1E98441B1C5C96001E60B0 /* YSESeriesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSESeriesListViewController.h; sourceTree = "<group>"; };
-		1D1E98451B1C5C96001E60B0 /* YSESeriesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSESeriesListViewController.m; sourceTree = "<group>"; };
+		1D1E98441B1C5C96001E60B0 /* YSEMoviesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMoviesListViewController.h; sourceTree = "<group>"; };
+		1D1E98451B1C5C96001E60B0 /* YSEMoviesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMoviesListViewController.m; sourceTree = "<group>"; };
 		1D1E98491B1C5C96001E60B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1D1E984B1B1C5C96001E60B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D1E98511B1C5CA5001E60B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D1E98531B1C5D64001E60B0 /* YSESerieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSESerieTableViewCell.h; sourceTree = "<group>"; };
 		1D1E98541B1C5D64001E60B0 /* YSESerieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSESerieTableViewCell.m; sourceTree = "<group>"; };
-		1D1E98571B1C5F4D001E60B0 /* YSESeriesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSESeriesService.h; sourceTree = "<group>"; };
-		1D1E98581B1C5F4D001E60B0 /* YSESeriesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSESeriesService.m; sourceTree = "<group>"; };
+		1D1E98571B1C5F4D001E60B0 /* YSEMoviesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMoviesService.h; sourceTree = "<group>"; };
+		1D1E98581B1C5F4D001E60B0 /* YSEMoviesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMoviesService.m; sourceTree = "<group>"; };
 		1D1E985A1B1C60FF001E60B0 /* YSESerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSESerie.h; sourceTree = "<group>"; };
 		1D1E985B1B1C60FF001E60B0 /* YSESerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSESerie.m; sourceTree = "<group>"; };
 		1D1E985D1B1C6133001E60B0 /* YSEMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMedia.h; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		1D1E98431B1C5C96001E60B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1D1E98441B1C5C96001E60B0 /* YSESeriesListViewController.h */,
-				1D1E98451B1C5C96001E60B0 /* YSESeriesListViewController.m */,
+				1D1E98441B1C5C96001E60B0 /* YSEMoviesListViewController.h */,
+				1D1E98451B1C5C96001E60B0 /* YSEMoviesListViewController.m */,
 				1D1E98631B1C867C001E60B0 /* YSEMovieDetailsViewController.h */,
 				1D1E98641B1C867C001E60B0 /* YSEMovieDetailsViewController.m */,
 			);
@@ -142,8 +142,8 @@
 		1D1E98561B1C5F11001E60B0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				1D1E98571B1C5F4D001E60B0 /* YSESeriesService.h */,
-				1D1E98581B1C5F4D001E60B0 /* YSESeriesService.m */,
+				1D1E98571B1C5F4D001E60B0 /* YSEMoviesService.h */,
+				1D1E98581B1C5F4D001E60B0 /* YSEMoviesService.m */,
 			);
 			name = Service;
 			path = Controller/Service;
@@ -358,9 +358,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1E985C1B1C60FF001E60B0 /* YSESerie.m in Sources */,
-				1D1E984D1B1C5C96001E60B0 /* YSESeriesListViewController.m in Sources */,
+				1D1E984D1B1C5C96001E60B0 /* YSEMoviesListViewController.m in Sources */,
 				1D1E985F1B1C6133001E60B0 /* YSEMedia.m in Sources */,
-				1D1E98591B1C5F4D001E60B0 /* YSESeriesService.m in Sources */,
+				1D1E98591B1C5F4D001E60B0 /* YSEMoviesService.m in Sources */,
 				1D1E98651B1C867C001E60B0 /* YSEMovieDetailsViewController.m in Sources */,
 				1D1E984C1B1C5C96001E60B0 /* AppDelegate.m in Sources */,
 				1D1E98621B1C6147001E60B0 /* YSEMovie.m in Sources */,
